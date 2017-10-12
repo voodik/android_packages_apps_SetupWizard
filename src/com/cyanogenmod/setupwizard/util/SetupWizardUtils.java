@@ -227,20 +227,20 @@ public class SetupWizardUtils {
 
     public static void disableComponentsForMissingFeatures(Context context) {
         disableComponent(context, BluetoothSetupActivity.class);
-        if (!hasFingerprint(context)) {
+//        if (!hasFingerprint(context)) {
             disableComponent(context, FingerprintActivity.class);
-        }
-        if (!hasTelephony(context)) {
+//        }
+//        if (!hasTelephony(context)) {
             disableComponent(context, MobileDataActivity.class);
             disableComponent(context, SimMissingActivity.class);
             disableComponent(context, ChooseDataSimActivity.class);
-        }
-        if (!SetupWizardUtils.isMultiSimDevice(context)) {
+//        }
+//        if (!SetupWizardUtils.isMultiSimDevice(context)) {
             disableComponent(context, ChooseDataSimActivity.class);
-        } else if (simMissing()) {
+//        } else if (simMissing()) {
             disableComponent(context, MobileDataActivity.class);
             disableComponent(context, ChooseDataSimActivity.class);
-        }
+//        }
         if (!SetupWizardUtils.hasWifi(context)) {
             disableComponent(context, WifiSetupActivity.class);
         }
